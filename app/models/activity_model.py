@@ -8,6 +8,6 @@ class Activity(Base):
     id = Column(Integer, primary_key=True)
     user_id = Column(Integer, ForeignKey("users.id"))
     url = Column(String)
-    domain = Column(String)
+    domain = Column(String,nullable=True)
     duration = Column(Integer, default=0)  # time spent in seconds
     timestamp = Column(DateTime, default=datetime.utcnow)
